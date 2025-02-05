@@ -1,0 +1,136 @@
+
+
+/* 🔹 Recipe Grid Layout */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* 🔹 Recipe Card */
+.recipe-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+/* 🔹 Recipe Card Hover Effect */
+.recipe-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Recipe Image */
+.recipe-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* 🔹 Recipe Description */
+.recipe-description {
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* 🔹 Favorite Button */
+.favorite-btn {
+    margin: 10px;
+    padding: 10px;
+    background: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* 🔹 Favorite Button Hover */
+.favorite-btn:hover {
+    background: #f57c00;
+}
+
+/* 🔹 Recipe Details Modal */
+.recipe-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Close Button */
+.close-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* 🔹 Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* 🔹 General Button Styles */
+button {
+    background-color: #ff6600;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+button:hover {
+    background-color: #e65c00;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    .search-bar {
+        width: 100%;
+    }
+    .search-filter-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .search-filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-bar, .filter-dropdown {
+        width: 100%;
+    }
+}
+
+/* 🔹 Fade In Animation */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
